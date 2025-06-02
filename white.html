@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极简主义</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            transition: background-color 1s ease;
+        }
+        
+        .message {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #333;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+        
+        .message::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: #333;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .message {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .message {
+                font-size: 2rem;
+                padding: 1.5rem;
+            }
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        在空白中，我们找到无限的可能性
+    </div>
+    
+    <div class="footer">
+        MINIMALISM · SIMPLICITY · ELEGANCE
+    </div>
+</body>
+</html>
