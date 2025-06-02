@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简约优雅的主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        .content-container {
+            max-width: 800px;
+            padding: 40px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+        
+        .quote {
+            font-style: italic;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            font-size: 1.3rem;
+            text-align: left;
+        }
+        
+        .signature {
+            display: block;
+            text-align: right;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #2980b9;
+        }
+        
+        .decoration {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3498db;
+            opacity: 0.7;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            p {
+                font-size: 1.2rem;
+            }
+            
+            .quote {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>欢迎来到宁静空间</h1>
+        
+        <div class="decoration">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        
+        <p>在喧嚣的世界中，我们都需要一个可以静下心来思考的地方。这个空间没有复杂的干扰，没有无尽的滚动信息，只有你与自己的对话。</p>
+        
+        <div class="quote">
+            "简单不是简陋，而是经过深思熟虑后的精致表达。在设计中，减去不必要的元素，留下的才是真正重要的本质。"
+            <span class="signature">— 设计箴言</span>
+        </div>
+        
+        <p>生活就像这个页面一样，有时我们需要简化，移除那些分散注意力的元素，才能专注于真正重要的事物。</p>
+    </div>
+</body>
+</html>
